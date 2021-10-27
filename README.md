@@ -1,5 +1,5 @@
 
-<h1 align="center">SQLite for Continuous Queries</h1>
+<h1 align="center">SQLite for Continuous Queries - Update - </h1>
 This release converts the system to a data streaming engine. I modified SQL to support the concept of a window and a continuous queries.
 I assumed using tumbling window, tuple-count window and re-evaluation evaluation strategy to evaluate SQL queries over infinite IoT stream. Using the main memory to store the data on the stream. The engine listen on the port specified in the code which the stream write to it.
 You can run the engine then write these commands for example:

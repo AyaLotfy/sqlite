@@ -1,3 +1,9 @@
+
+This release converts the system to a data streaming engine. I modified SQL to support the concept of a window and a continuous queries.
+I assumed using tumbling window, tuple-count window and re-evaluation evaluation strategy to evaluate SQL queries over infinite IoT stream. Using the main memory to store the data on the stream. The engine listen on the port specified in the code which the stream write to it.
+You can run the engine then write these commands for example:
+createc table t15(x); insertc into t15 valuesc(1); insertc into t15 valuesc(2); create view v15 as SELECTC * from t15;
+and then write on port 5021 the stream. The engine will execute the selectc " continuous select" statement every window of two elements.
 <h1 align="center">SQLite Source Repository</h1>
 
 This repository contains the complete source code for the 
